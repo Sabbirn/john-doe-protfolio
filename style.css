@@ -1,0 +1,345 @@
+/* 
+    Google Font 
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #bebbc7;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* Bassic CSS */
+a {
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.container {
+    padding: 0 15%;
+}
+a.theme-button {
+    text-decoration: none;
+    color: white;
+    background-color: #00c0ff;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 50px;
+    transition: .5s;
+}
+a.theme-button:hover {
+    background-color: #fff;
+    color: #00c0ff;
+}
+
+a.theme-button-small {
+    text-decoration: none;
+    color: white;
+    background-color: #00c0ff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 50px;
+    transition: .5s;
+    font-size: 14px;
+}
+a.theme-button-small:hover {
+    background-color: #fff;
+    color: #00c0ff;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 75px;
+}
+.section-heading h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #00c0ff;
+}
+.section-heading h2 {
+    font-size: 36px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+
+/* Header Area */
+.header-area {
+    padding: 45px 0;
+}
+.hrader-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.logo a {
+    text-decoration: none;
+}
+.logo a h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+.icon {
+    background-color: #3a2b71;
+    padding: 10px 20px;
+}
+.main-menu a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 40px;
+    transition: .5s;
+}
+.main-menu a:hover {
+    color: #00c0ff;
+}
+
+/* Main Area */
+.hero-area {
+    padding: 80px 0;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-text h2{
+    font-size: 72px;
+    color: #fff;
+}
+.hero-text p{
+    font-size: 20px;
+}
+
+/* About area */
+.about-area {
+    background-color: #1e1345;
+    padding: 100px 0;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: ;
+}
+.about-img {
+    flex: 1;
+}
+.about-text {
+    flex: 1;
+}
+.about-text h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+/* service-area */
+.service-area {
+    padding: 100px 0;
+}
+.service-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.single-service {
+    background-color: #3a2b71;
+    padding: 30px;
+}
+.single-service h3 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+/* contact-area */
+.contact-area {
+    background-color: #1e1345;
+    padding: 100px 0;
+}
+.contact-content form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    grid-template-areas: 
+    "f l"
+    "e p"
+    "m m"
+    "s s";
+}
+#first-name{
+    grid-area: f;
+}
+#last-name{
+    grid-area: l;
+}
+#email-address{
+    grid-area: e;
+}
+#phone-number{
+    grid-area: p;
+}
+#message{
+    grid-area: m;
+}
+#send-message{
+    grid-area: s;
+    background-color: #3a2b71;
+    cursor: pointer;
+}
+.contact-content input {
+    font-size: 17px;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid #3a2b71;
+    color: #ffffff;
+}
+.contact-content textarea {
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid #3a2b71;
+    color: #ffffff;
+}
+/* Footer */
+.footer-area {
+    padding: 25px 0;
+    text-align: center;
+    background-color: #1e1345;
+    border-top: 1px solid #3a2b71;
+}
+
+
+
+/* Responsiv CSS */
+@media only screen and (max-width: 991px){
+    .container {
+        padding: 0 10%;
+    }
+    /* header */
+    .menu-icon {
+        display: block;
+    }
+    .hrader-content {
+        grid-template-areas:
+        "l i"
+        "m m";
+    }
+    .logo {
+        grid-area: l;
+    }
+    .menu-icon {
+        grid-area: i;
+        justify-self: end;
+    }
+    .main-menu {
+        grid-area: m;
+        text-align: center;
+        background-color: #3a2b71;
+        margin-top: 10px;
+        padding: 15px 0;
+        display: none;
+    }
+    .main-menu a {
+        display: block;
+        padding: 12px 0;
+        margin-left: 0;
+    }
+    .main-menu.show-menu {
+        display: block;
+    }
+    /* hero area */
+    .hero-content {
+        flex-direction: column;
+    }
+    .hero-img img {
+        width: 100%;
+    }
+    .hero-img {
+        order: -1;
+    }
+    .hero-text {
+        text-align: center;
+    }
+
+    /* about */
+    .about-content {
+        flex-direction: column;
+        align-items: inherit;
+    }
+    .about-img img {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .hero-img {
+        order: -1;
+    }
+    .hero-text {
+        text-align: center;
+    }
+
+    /* service */
+    .service-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .single-service {
+        text-align: center;
+    }
+
+}
+@media only screen and (max-width: 575px){
+    /* hero */
+    .section-heading h2 {
+        font-size: 28px;
+    }
+    .hero-text h2 {
+        font-size: 32px;
+    }
+    /* contat */
+    .contact-content form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        grid-template-areas: 
+        "f f"
+        "l l"
+        "e e"
+        "p p"
+        "m m"
+        "s s";
+    }
+}
